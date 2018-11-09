@@ -1,4 +1,4 @@
-# slwly-webapp
+# Aumlettr (working name)
 
 ## Project setup
 ```

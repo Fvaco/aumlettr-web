@@ -1,29 +1,27 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app id="app">
+      <!-- <v-toolbar app flat fixed></v-toolbar> -->
+      <v-navigation-drawer app>
+        <app-pals-list></app-pals-list>
+      </v-navigation-drawer>
+      <v-content app>
+          <router-view></router-view>
+      </v-content>    
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+import AppPalsList from './components/AppPalsList.vue';
+
+export default {
+    name: "App",
+    components:{
+      AppPalsList
+    },
+    data() {
+        return {
+            //
+        };
     }
-  }
-}
-</style>
+};
+</script>
