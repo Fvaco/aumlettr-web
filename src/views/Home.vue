@@ -1,18 +1,10 @@
 <template>
-<v-container fluid>
-    <v-layout>
-        <v-flex>Content</v-flex>
-    </v-layout>
-</v-container>
-   
+    <v-layout></v-layout>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
+<style lang="scss" scoped>
 </style>

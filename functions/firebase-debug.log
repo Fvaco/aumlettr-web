@@ -1,0 +1,31 @@
+[debug] [2018-11-11T16:42:47.703Z] ----------------------------------------------------------------------
+[debug] [2018-11-11T16:42:47.705Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only functions
+[debug] [2018-11-11T16:42:47.706Z] CLI Version:   6.0.1
+[debug] [2018-11-11T16:42:47.706Z] Platform:      darwin
+[debug] [2018-11-11T16:42:47.706Z] Node Version:  v11.0.0
+[debug] [2018-11-11T16:42:47.707Z] Time:          Sun Nov 11 2018 16:42:47 GMT+0000 (Western European Standard Time)
+[debug] [2018-11-11T16:42:47.707Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-11T16:42:47.717Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-11T16:42:47.717Z] > authorizing via signed-in user
+[debug] [2018-11-11T16:42:47.717Z] [iam] checking project aumlettr-web for permissions ["firebase.projects.get"]
+[debug] [2018-11-11T16:42:47.719Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-11-11T16:42:47.719Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2018-11-11T16:42:48.069Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-11T16:42:48.082Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/aumlettr-web:testIamPermissions  
+
+[debug] [2018-11-11T16:42:49.017Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-11T16:42:49.018Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/aumlettr-web  
+ 
+[debug] [2018-11-11T16:42:49.948Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/fvaco/workspace/PersonalProjects/slwly-webapp'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-11-11T16:42:50.516Z] Fetching environment
+[debug] [2018-11-11T16:42:50.518Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/864105823567:getServerAppConfig  
+ 
+[debug] [2018-11-11T16:42:50.769Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-11T16:42:50.770Z] Starting @google-cloud/functions-emulator
+[debug] [2018-11-11T16:42:51.829Z] Parsing function triggers
