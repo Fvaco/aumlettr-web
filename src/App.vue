@@ -9,25 +9,31 @@
       v-if="$vuetify.breakpoint.smAndDown"
       app
       fixed
+      shift
       :active.sync="bottomNav"
       :value="$vuetify.breakpoint.smAndDown"
       color="white"
     >
-      <v-btn color="teal" flat value="friends">
+      <v-btn color="primary" flat value="home">
+        <span>Home</span>
+        <v-icon>mdi-google-circles-communities</v-icon>
+      </v-btn>
+
+      <v-btn color="primary" flat value="friends">
         <span>Friends</span>
         <v-icon>people</v-icon>
       </v-btn>
 
-      <v-btn color="teal" flat value="explore">
+      <v-btn color="primary" flat value="explore">
         <span>Explore</span>
         <v-icon>explore</v-icon>
       </v-btn>
-      <v-btn color="teal" flat value="drafts">
+      <v-btn color="primary" flat value="drafts">
         <span>Drafts</span>
         <v-icon>edit</v-icon>
       </v-btn>
 
-      <v-btn color="teal" flat value="configure">
+      <v-btn color="primary" flat value="configure">
         <span>Configure</span>
         <v-icon>tune</v-icon>
       </v-btn>

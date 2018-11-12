@@ -7,7 +7,7 @@
     :class="{
       'elevation-5': mouseover
     }"
-    class="black--text pa-4 friend-letter__card"
+    class="black--text px-4 py-3 friend-letter__card"
   >
     <v-layout row>
       <v-spacer></v-spacer>
@@ -31,7 +31,7 @@
     </v-layout>
     <v-divider></v-divider>
 
-    <v-layout class="pt-1" d-flex column justify-center>
+    <v-layout class="pt-2" d-flex column justify-center>
       <h4 class="grey--text text--darken-2">Guy Brooks</h4>
       <span class="caption">{{ $moment().format("ll") }}</span>
       <v-spacer></v-spacer>

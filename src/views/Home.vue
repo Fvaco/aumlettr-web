@@ -1,9 +1,20 @@
 <template>
-  <v-layout></v-layout>
+  <v-container fluid class="pa-0">
+    <v-layout row>
+      <recent-letters></recent-letters>
+    </v-layout>
+    
+  </v-container>
 </template>
 
 <script>
-export default {};
+import RecentLetters from "../components/RecentLetters.vue";
+
+export default {
+  components:{
+    RecentLetters
+  }
+};
 </script>
 
 <style lang="scss" scoped></style>

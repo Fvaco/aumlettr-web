@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar ref="drawerToolbar" color="accent">
+    <v-toolbar ref="drawerToolbar" class="elevation-1" color="accent">
       <v-toolbar-title>Aumlettr</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>

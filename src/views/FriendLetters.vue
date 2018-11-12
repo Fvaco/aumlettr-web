@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-layout class="px-1" justify-space-between align-center row>
+    <v-layout class="px-2" justify-space-between align-center row>
       <v-layout align-start column>
         <v-flex class="subheading font-weight-medium py-1"> Guy Brooks </v-flex>
         <v-layout row>
@@ -24,11 +24,15 @@
       <v-layout class="text-xs-right">
         <v-flex>
           <v-badge color="purple" left bottom overlap>
-            <v-avatar size="24" slot="badge">
+            <v-tooltip left slot="badge">
+              <v-avatar size="24" slot="activator">
               <v-img
                 src="https://image.flaticon.com/icons/svg/197/197430.svg"
               ></v-img>
             </v-avatar>
+            Canada
+            </v-tooltip>
+            
             <v-avatar>
               <v-img src="https://picsum.photos/200/300/?random"></v-img>
             </v-avatar>
