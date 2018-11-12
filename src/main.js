@@ -7,7 +7,6 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
-
 Vue.config.productionTip = false;
 
 Object.defineProperty(Vue.prototype, "$lodash", {
@@ -15,6 +14,7 @@ Object.defineProperty(Vue.prototype, "$lodash", {
     return this.$root.lodash;
   }
 });
+moment.tz.setDefault("UTC");
 Object.defineProperty(Vue.prototype, "$moment", {
   get() {
     return this.$root.moment;

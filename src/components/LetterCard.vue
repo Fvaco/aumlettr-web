@@ -3,7 +3,6 @@
     color="whitesmoke" 
     @mouseover="mouseover = true"
     @mouseout="mouseover = false"
-
     :class="{
         'elevation-5': mouseover
     }"

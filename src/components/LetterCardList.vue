@@ -1,7 +1,7 @@
 <template>
-    <v-container grid-list-md class="pt-5">
+    <v-container grid-list-lg>
         <v-layout row wrap>
-            <v-flex xs12 sm6 lg4 :key="index" v-for="index in 5"> 
+            <v-flex xs12 sm6 lg4 :key="index" v-for="index in 8"> 
                 <letter-card></letter-card>
             </v-flex>
         </v-layout>
