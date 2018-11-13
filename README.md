@@ -8,29 +8,5 @@ Share your passion and way of thinking with everybody out there. Learn new cultu
 # Live demo
 The project is currently on a early stage of development but you can take a look here: aumlettr-web.firebaseapp.com
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
 # Acknowledgements
 This project is strongly inspired in Slowly (https://www.getslowly.com/) by Kevin Wong. 
