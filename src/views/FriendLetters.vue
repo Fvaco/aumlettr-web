@@ -5,10 +5,6 @@
           <v-icon>arrow_back</v-icon>
         </v-toolbar-side-icon>
         <v-toolbar-title>Guy Brooks</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-btn icon>
-          <v-icon>mdi-sort</v-icon>
-        </v-btn>
       </v-toolbar>
     <v-layout class="px-2" justify-space-between align-center row>
       <v-layout align-start column>

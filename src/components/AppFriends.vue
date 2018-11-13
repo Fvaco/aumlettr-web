@@ -9,7 +9,7 @@
       </v-toolbar-items>
     </v-toolbar>
     <div :style="palsListStyle">
-      <v-list two-line dense class="transparent">
+      <v-list two-line :dense="$vuetify.breakpoint.smAndDown" class="transparent">
         <template v-for="(item, index) in items">
           <v-subheader v-if="item.header" :key="item.header">
             <v-spacer></v-spacer>
@@ -34,7 +34,7 @@
               ></v-list-tile-sub-title>
             </v-list-tile-content>
             <v-list-tile-action>
-              <p class="primary--text lighten-2 font-weight-medium">new!</p>
+              <p class="primary--text lighten-2 body-1 font-weight-medium">new!</p>
             </v-list-tile-action>
           </v-list-tile>
         </template>

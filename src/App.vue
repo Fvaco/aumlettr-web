@@ -14,26 +14,26 @@
       :value="$vuetify.breakpoint.smAndDown"
       color="white"
     >
-      <v-btn color="primary" exact :to="{name: 'home'}" flat value="home">
+      <v-btn color="primary" :ripple="false"  exact :to="{name: 'home'}" flat value="home">
         <span>Home</span>
         <v-icon>mdi-google-circles-communities</v-icon>
       </v-btn>
 
-      <v-btn color="primary" :to="{name: 'friends'}" flat value="friends">
+      <v-btn color="primary" :ripple="false" :to="{name: 'friends'}" flat value="friends">
         <span>Friends</span>
         <v-icon>people</v-icon>
       </v-btn>
 
-      <v-btn color="primary" flat value="explore">
+      <v-btn color="primary" :ripple="false" flat value="explore">
         <span>Explore</span>
         <v-icon>explore</v-icon>
       </v-btn>
-      <v-btn color="primary" flat value="drafts">
+      <v-btn color="primary" :ripple="false" flat value="drafts">
         <span>Drafts</span>
         <v-icon>edit</v-icon>
       </v-btn>
 
-      <v-btn color="primary" flat value="configure">
+      <v-btn color="primary" :ripple="false" flat value="configure">
         <span>Configure</span>
         <v-icon>tune</v-icon>
       </v-btn>
