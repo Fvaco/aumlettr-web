@@ -1,7 +1,7 @@
 <template>
   <v-app id="app">
     <!-- <v-toolbar app flat fixed></v-toolbar> -->
-    <v-navigation-drawer app :mobile-break-point="960">
+    <v-navigation-drawer app v-if="$vuetify.breakpoint.mdAndUp" :mobile-break-point="960">
       <app-friends></app-friends>
     </v-navigation-drawer>
 
