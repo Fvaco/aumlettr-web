@@ -1,5 +1,15 @@
 <template>
   <v-container fluid>
+    <v-toolbar v-if="$vuetify.breakpoint.smAndDown" app fixed flat :color="$vuetify.theme.backgroundColor">
+        <v-toolbar-side-icon @click="$router.back()">
+          <v-icon>arrow_back</v-icon>
+        </v-toolbar-side-icon>
+        <v-toolbar-title>Guy Brooks</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-btn icon>
+          <v-icon>mdi-sort</v-icon>
+        </v-btn>
+      </v-toolbar>
     <v-layout class="px-2" justify-space-between align-center row>
       <v-layout align-start column>
         <v-flex class="subheading font-weight-medium py-1"> Guy Brooks </v-flex>
@@ -23,7 +33,7 @@
       </v-layout>
       <v-layout class="text-xs-right">
         <v-flex>
-          <v-badge color="purple" left bottom overlap>
+          <v-badge color="primary" left bottom overlap>
             <v-tooltip left slot="badge">
               <v-avatar size="24" slot="activator">
               <v-img

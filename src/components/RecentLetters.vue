@@ -5,7 +5,7 @@
   </v-container>
   
   <div class="letter-cards-list_wrapper">
-    <div class="letter-card__wrapper" :key="index" v-for="index in 8">
+    <div class="letter-card__wrapper" :key="index" v-for="index in 10">
       <letter-card></letter-card>
     </div>
   </div>

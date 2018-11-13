@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-toolbar v-if="$vuetify.breakpoint.mdAndUp" ref="drawerToolbar" class="elevation-1" color="backgroundColor">
-      <v-toolbar-title>Aumlettr</v-toolbar-title>
+      <v-toolbar-title style="cursor:pointer" @click="$router.push({name:'home'})">Aumlettr</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn icon flat color="primary"> <v-icon>search</v-icon> </v-btn>
@@ -22,7 +22,7 @@
             :key="index"
           ></v-divider>
 
-          <v-list-tile v-else @click="" :key="item.title + index" avatar>
+          <v-list-tile v-else :to="{name:'friend'}" :key="item.title + index" avatar>
             <v-list-tile-avatar>
               <img :src="item.avatar" />
             </v-list-tile-avatar>
