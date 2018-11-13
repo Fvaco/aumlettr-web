@@ -10,16 +10,16 @@
       app
       fixed
       shift
-      :active.sync="bottomNav"
+      
       :value="$vuetify.breakpoint.smAndDown"
       color="white"
     >
-      <v-btn color="primary" flat value="home">
+      <v-btn color="primary" exact :to="{name: 'home'}" flat value="home">
         <span>Home</span>
         <v-icon>mdi-google-circles-communities</v-icon>
       </v-btn>
 
-      <v-btn color="primary" flat value="friends">
+      <v-btn color="primary" :to="{name: 'friends'}" flat value="friends">
         <span>Friends</span>
         <v-icon>people</v-icon>
       </v-btn>
@@ -52,7 +52,7 @@ export default {
   },
   data() {
     return {
-      bottomNav: "friends"
+      bottomNav: "home"
     };
   },
   computed: {
@@ -61,7 +61,7 @@ export default {
     }
   },
   created() {
-    console.log(this.$vuetify);
+    // console.log(this.$vuetify);
   }
 };
 </script>

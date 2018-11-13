@@ -22,7 +22,13 @@ export default new Router({
             import(/* webpackChunkName: "home" */ "./views/Home.vue")
         },
         {
-          path: "/friend",
+          path: "/friends",
+          name: "friends",
+          component: () =>
+            import(/* webpackChunkName: "home" */ "./views/FriendsList.vue")
+        },
+        {
+          path: "friend",
           name: "friend",
           component: () =>
             import(/* webpackChunkName: "friend" */ "./views/FriendLetters.vue")
