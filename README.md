@@ -9,4 +9,4 @@ Share your passion and way of thinking with everybody out there. Learn new cultu
 The project is currently on a early stage of development but you can take a look here: https://aumlettr-web.firebaseapp.com
 
 # Acknowledgements
-This project is strongly inspired in Slowly (https://www.getslowly.com/) by Kevin Wong. 
+This project is strongly inspired by Kevin Wong's Slowly app (https://www.getslowly.com/).
