@@ -1,14 +1,14 @@
 <template>
   <div class="pt-2">
-    <div v-if="this.$vuetify.breakpoint.smAndDown">
-      <v-toolbar fixed flat ref="drawerToolbar" :color="$vuetify.theme.backgroundColor">
+    <div v-if="$vuetify.breakpoint.smAndDown">
+      <app-toolbar>
         <v-toolbar-title>Pen friends</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn icon>
           <v-icon>mdi-sort</v-icon>
         </v-btn>
-      </v-toolbar>
-      <app-friends class="pt-5"></app-friends>
+      </app-toolbar>
+      <app-friends></app-friends>
     </div>
     <div v-else>
       <v-container fill-height>
@@ -23,9 +23,11 @@
 
 <script>
 import AppFriends from '../components/AppFriends.vue';
+import AppToolbar from "../components/AppToolbar.vue";
 export default {
   components: {
-    AppFriends
+    AppFriends,
+    AppToolbar
   }
 }
 </script>

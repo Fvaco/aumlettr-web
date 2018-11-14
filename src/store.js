@@ -5,12 +5,22 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    mobileActive: false,
+    mobileNavigation: false,
     friends: []
   },
-  mutations: {},
-  actions: {},
+  actions: {
+    setMobileNavigation({ commit }, payload) {
+      commit("setMobileNavigation", payload);
+    }
+  },
+  mutations: {
+    setMobileNavigation(state, payload){
+      state.mobileNavigation = payload;
+    }
+  },
   getters: {
-    mobileActive: state => state.mobileActive
+    mobileNavigation: state => {
+      return state.mobileNavigation;
+    }
   }
 });

@@ -1,11 +1,12 @@
 <template>
   <v-container fluid>
-    <v-toolbar v-if="$vuetify.breakpoint.smAndDown" app fixed flat :color="$vuetify.theme.backgroundColor">
+    <app-toolbar>
         <v-toolbar-side-icon @click="$router.back()">
           <v-icon>arrow_back</v-icon>
         </v-toolbar-side-icon>
         <v-toolbar-title>Guy Brooks</v-toolbar-title>
-      </v-toolbar>
+    </app-toolbar>
+
     <v-layout class="px-2" justify-space-between align-center row>
       <v-layout align-start column>
         <v-flex class="subheading font-weight-medium py-1"> Guy Brooks </v-flex>
@@ -55,9 +56,11 @@
 
 <script>
 import LetterCardList from "../components/LetterCardList.vue";
+import AppToolbar from "../components/AppToolbar.vue";
 export default {
   components: {
-    LetterCardList
+    LetterCardList,
+    AppToolbar
   }
 };
 </script>

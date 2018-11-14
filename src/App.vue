@@ -1,67 +1,46 @@
 <template>
   <v-app id="app">
+    
     <!-- <v-toolbar app flat fixed></v-toolbar> -->
-    <v-navigation-drawer app v-if="$vuetify.breakpoint.mdAndUp" :mobile-break-point="960">
+    <v-navigation-drawer
+      app
+      v-if="$vuetify.breakpoint.mdAndUp"
+      :mobile-break-point="960">
       <app-friends></app-friends>
     </v-navigation-drawer>
-
-    <v-bottom-nav
-      v-if="$vuetify.breakpoint.smAndDown"
-      app
-      fixed
-      shift
-      
-      :value="$vuetify.breakpoint.smAndDown"
-      color="white"
-    >
-      <v-btn color="primary" :ripple="false"  exact :to="{name: 'home'}" flat value="home">
-        <span>Home</span>
-        <v-icon>mdi-google-circles-communities</v-icon>
-      </v-btn>
-
-      <v-btn color="primary" :ripple="false" :to="{name: 'friends'}" flat value="friends">
-        <span>Friends</span>
-        <v-icon>people</v-icon>
-      </v-btn>
-
-      <v-btn color="primary" :ripple="false" flat value="explore">
-        <span>Explore</span>
-        <v-icon>explore</v-icon>
-      </v-btn>
-      <v-btn color="primary" :ripple="false" flat value="drafts">
-        <span>Drafts</span>
-        <v-icon>edit</v-icon>
-      </v-btn>
-
-      <v-btn color="primary" :ripple="false" flat value="configure">
-        <span>Configure</span>
-        <v-icon>tune</v-icon>
-      </v-btn>
-    </v-bottom-nav>
-    <v-content app> <router-view></router-view> </v-content>
+    <v-content app> 
+      <router-view></router-view> 
+    </v-content>
+    <app-bottom-nav></app-bottom-nav>
   </v-app>
 </template>
 
 <script>
 import AppFriends from "./components/AppFriends.vue";
+import AppBottomNav from "./components/AppMobileBottomNav.vue";
 
 export default {
   name: "App",
   components: {
-    AppFriends
+    AppFriends,
+    AppBottomNav
   },
   data() {
-    return {
-      bottomNav: "home"
-    };
+    return {};
   },
-  computed: {
-    breakpoint() {
-      return this.$vuetify.breakpoint;
-    }
-  },
-  created() {
-    // console.log(this.$vuetify);
-  }
+  // watch:{
+  //   isMobileViewport(newValue, oldValue){
+  //     if(oldValue !== newValue) 
+  //     this.$store.dispatch('setMobileNavigation', newValue);
+  //   }
+  // },
+  // computed:{
+  //   isMobileViewport(){
+  //     return this.$vuetify.breakpoint.smAndDown;
+  //   }
+  // },
+  // created() {
+  //   this.$store.dispatch('setMobileNavigation', this.isMobileViewport);
+  // }
 };
 </script>

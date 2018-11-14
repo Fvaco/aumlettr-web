@@ -8,7 +8,7 @@
         <v-btn icon flat color="primary"> <v-icon>more_vert</v-icon> </v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <div :style="palsListStyle">
+  
       <v-list two-line :dense="$vuetify.breakpoint.smAndDown" class="transparent">
         <template v-for="(item, index) in items">
           <v-subheader v-if="item.header" :key="item.header">
@@ -39,16 +39,17 @@
           </v-list-tile>
         </template>
       </v-list>
-    </div>
   </div>
 </template>
 
 <script>
+import AppMobileToolbar from './AppMobileToolbar.vue';
 export default {
+  components:{
+    AppMobileToolbar
+  },
   data() {
     return {
-      drawerToolbarHeight: undefined,
-      palsListStyle: {},
       items: [
         {
           avatar: "https://image.flaticon.com/icons/svg/702/702003.svg",
@@ -145,27 +146,12 @@ export default {
           title: "Guy Brooks",
           subtitle: "<span class='text--primary'>Canada</span> &mdash; Oct 23"
         },
-        { divider: true, inset: true },
+        { divider: true, inset: true }
       ]
     };
-  },
-  methods: {
-    updateStyle() {
-      console.log
-      this.drawerToolbarHeight = this.$refs.drawerToolbar && this.$refs.drawerToolbar.$el.clientHeight;
-      this.palsListStyle = {
-        height: `calc(100vh - ${this.drawerToolbarHeight}px)`,
-        paddingBottom: "10px",
-        overflowX: "hidden",
-        overflowY: "auto"
-      };
-    }
-  },
-  mounted(){
-    console.log("mounted!")
-    this.updateStyle();
   }
 };
 </script>
 
-<style></style>
+<style>
+</style>
