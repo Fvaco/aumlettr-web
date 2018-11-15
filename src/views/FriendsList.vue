@@ -32,7 +32,7 @@
         <v-flex align-center class="text-xs-center">
           <span class="subheading pr-3 font-weight-medium">
             <v-icon class="pr-2">mdi-reply</v-icon>
-            Select one or your amazing pen friends!
+            Select one of your amazing pen friends!
           </span>
         </v-flex>
       </v-flex>
