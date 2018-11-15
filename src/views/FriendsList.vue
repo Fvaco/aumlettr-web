@@ -1,24 +1,48 @@
 <template>
-  <div class="pt-2">
-    <div v-if="$vuetify.breakpoint.smAndDown">
-      <app-toolbar>
-        <v-toolbar-title>Pen friends</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-btn icon>
-          <v-icon>mdi-sort</v-icon>
-        </v-btn>
-      </app-toolbar>
-      <app-friends></app-friends>
-    </div>
-    <div v-else>
-      <v-container fill-height>
-        <v-layout fill-height row align-center justify-center>
-          Hello Friends list web version
-        </v-layout>
-      </v-container>
-    </div>
+  <v-container fill-height fluid class="pt-2 px-0">
+    <v-layout v-if="$vuetify.breakpoint.smAndDown">
+      <v-flex>
+        <app-toolbar>
+          <v-toolbar-title>Pen friends</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn icon>
+            <v-icon>mdi-sort</v-icon>
+          </v-btn>
+        </app-toolbar>
+        <app-friends></app-friends>
+      </v-flex>
+    </v-layout>
+    <v-layout v-else fill-height justify-center align-center class="secondary--text">
+      <v-layout column justify-center align-center>
+        <v-flex justify-center align-center class="py-3 text-xs-center">
+        <v-img
+          width="300"
+          :src="require('../assets/meet-friends.png')">
+        </v-img>
+      </v-flex>
+      <v-flex justify-center align-center class="text-xs-center">
+        <h1 class="pb-4">Ready to meet a new pal?</h1>
+        <v-btn large primary class="primary">Explore the world now!</v-btn>
+        <v-flex d-flex justify-center align-center class="px-5 py-4 grey--text">
+          <v-divider></v-divider>
+            <h4>or</h4>
+          <v-divider></v-divider> 
+        </v-flex>
+        
+        <v-flex align-center class="text-xs-center">
+          <span class="subheading pr-3 font-weight-medium">
+            <v-icon class="pr-2">mdi-reply</v-icon>
+            Select one or your amazing pen friends!
+          </span>
+        </v-flex>
+      </v-flex>
+      </v-layout>
+      
 
-  </div>
+      
+      
+    </v-layout>    
+  </v-container>
 </template>
 
 <script>

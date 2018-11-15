@@ -18,7 +18,6 @@ export default {
   },
   methods:{
     checkToolbarPadding(){
-      console.log(this.$slots);
       if(this.$refs.mobileToolbar)
         this.toolbarHeight = this.$refs.mobileToolbar.$el.clientHeight + 'px';
     }
