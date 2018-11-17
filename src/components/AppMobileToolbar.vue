@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar ref="mobileToolbar" 
+    <v-toolbar extension-height="65" scroll-threshold="100" scroll-toolbar-off-screen v-bind="$attrs" ref="mobileToolbar" 
       fixed 
       flat>
       <slot v-for="slot in Object.keys($slots)" :name="slot" :slot="slot"></slot>
@@ -24,6 +24,7 @@ export default {
   },
   mounted() {
     this.checkToolbarPadding();
+    console.log(this);
   }
 };
 </script>

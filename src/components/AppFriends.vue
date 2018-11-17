@@ -49,7 +49,8 @@
               ></v-list-tile-sub-title>
             </v-list-tile-content>
             <v-list-tile-action>
-              <p class="primary--text lighten-2 body-1 font-weight-medium">new!</p>
+              <v-icon v-if="item.hasNew" class="red--text lighten-2 body-1 font-weight-medium">mdi-checkbox-blank-circle</v-icon>
+              <v-icon v-if="item.sending" class="lighten-2 body-1 font-weight-medium">mdi-redo-variant</v-icon>
             </v-list-tile-action>
           </v-list-tile>
         </template>
@@ -68,21 +69,23 @@ export default {
         {
           avatar: "https://image.flaticon.com/icons/svg/702/702003.svg",
           title: "Guy Brooks",
-          subtitle: "<span class='text--primary'>Canada</span> &mdash; Oct 23"
+          subtitle: "<span class='text--primary'>Canada</span> &mdash; Oct 23",
+          hasNew: true,
         },
         { divider: true, inset: true },
         {
           avatar: "https://image.flaticon.com/icons/svg/701/701997.svg",
           title:
             'Paolo Pietri <span style="font-size: 0.9em" class="grey--text text--lighten-1 material-icons">reply</span>',
-          subtitle: "<span class='text--primary'>Italy</span> &mdash; Oct 12"
+          subtitle: "<span class='text--primary'>Italy</span> &mdash; Oct 12",
+          hasNew: true,
         },
         { divider: true, inset: true },
         {
           avatar: "https://image.flaticon.com/icons/svg/702/702011.svg",
           title: "Sandra Adams",
-          subtitle:
-            "<span class='text--primary'>Indonesia</span> &mdash; Last week"
+          subtitle: "<span class='text--primary'>Indonesia</span> &mdash; Last week",
+          sending: true
         },
         { divider: true, inset: true },
         {

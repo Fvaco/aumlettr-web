@@ -10,20 +10,21 @@
     }"
     class="black--text px-4 py-3 friend-letter__card"
   >
-    <v-layout row>
+    <v-layout row align-center>
+      <v-icon class="caption red--text font-weight-bold">mdi-checkbox-blank-circle</v-icon>
       <v-spacer></v-spacer>
       <template v-if="sent">
         <v-icon class="caption">check</v-icon>
         <v-icon v-if="read" class="caption" color="primary">check</v-icon>
       </template>
-      <!--
-        <template v-else>
+      
+        <!-- <template v-else>
             <v-icon class="caption">reply</v-icon>
-        </template>
-      -->
+        </template> -->
+     
     </v-layout>
 
-    <v-layout row>
+    <v-layout row class="pt-2">
       <p class="grey--text">
         Dear man, <br />
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -36,6 +37,7 @@
       <h4 class="grey--text text--darken-1">Guy Brooks</h4>
       <span class="caption grey--text">{{ $moment().format("ll") }}</span>
       <v-spacer></v-spacer>
+      
     </v-layout>
   </v-card>
 </template>
