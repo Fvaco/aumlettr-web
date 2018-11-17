@@ -22,38 +22,38 @@
 </template>
 
 <script>
-import LetterCard from './LetterCard.vue';
+import LetterCard from "./LetterCard.vue";
 export default {
-    components:{
-      LetterCard
-    },
-    data () {
-      return {
-        items: []
-      }
-    }
+  components: {
+    LetterCard
+  },
+  data() {
+    return {
+      items: []
+    };
   }
+};
 </script>
 
 <style lang="scss">
-  #recent-letters {
-    width: 100%;
-    overflow: hidden;
-    .letter-cards-list_wrapper {
-      position: relative;
-      
-      white-space: nowrap;
-      padding: 10px;
-      padding-left: 60px;
-      overflow-x: auto;
-      overflow-y: hidden;
-    }
-    .letter-card__wrapper {
-      display: inline-block;
-      overflow: hidden;
-      white-space: normal;
-      padding: 10px;
-      width: 230px;
-    }
+#recent-letters {
+  width: 100%;
+  overflow: hidden;
+  .letter-cards-list_wrapper {
+    position: relative;
+
+    white-space: nowrap;
+    padding: 10px;
+    padding-left: 60px;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
+  .letter-card__wrapper {
+    display: inline-block;
+    overflow: hidden;
+    white-space: normal;
+    padding: 10px;
+    width: 230px;
+  }
+}
 </style>

@@ -11,10 +11,11 @@
 import RecentLetters from "../components/RecentLetters.vue";
 
 export default {
-  components:{
+  components: {
     RecentLetters
   }
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

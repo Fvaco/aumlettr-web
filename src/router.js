@@ -18,20 +18,22 @@ export default new Router({
         {
           path: "",
           name: "home",
-          component: () =>
-            import(/* webpackChunkName: "home" */ "./views/Home.vue")
+          component: () => import("./views/Home.vue")
         },
         {
           path: "/friends",
           name: "friends",
-          component: () =>
-            import(/* webpackChunkName: "home" */ "./views/FriendsList.vue")
+          component: () => import("./views/FriendsList.vue")
         },
         {
-          path: "friend",
+          path: "/friends/1",
           name: "friend",
-          component: () =>
-            import(/* webpackChunkName: "friend" */ "./views/FriendLetters.vue")
+          component: () => import("./views/FriendLetters.vue")
+        },
+        {
+          path: "/letter/1",
+          name: "letter",
+          component: () => import("./views/LetterRead.vue")
         }
       ]
     }

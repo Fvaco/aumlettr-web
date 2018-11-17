@@ -6,6 +6,7 @@ import "./plugins/vuetify";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import { createProvider } from "./vue-apollo";
 
 Vue.config.productionTip = false;
 
@@ -24,11 +25,14 @@ Object.defineProperty(Vue.prototype, "$moment", {
 new Vue({
   router,
   store,
+
   data() {
     return {
       lodash,
       moment
     };
   },
+
+  apolloProvider: createProvider(),
   render: h => h(App)
 }).$mount("#app");

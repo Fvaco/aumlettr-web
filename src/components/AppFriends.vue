@@ -1,11 +1,26 @@
 <template>
   <div>
-    <v-toolbar v-if="$vuetify.breakpoint.mdAndUp" ref="drawerToolbar" class="elevation-1" color="backgroundColor">
+    <v-toolbar v-if="$vuetify.breakpoint.mdAndUp" ref="drawerToolbar" class="elevation-1">
       <v-toolbar-title style="cursor:pointer" @click="$router.push({name:'home'})">Aumlettr</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn icon flat color="primary"> <v-icon>search</v-icon> </v-btn>
-        <v-btn icon flat color="primary"> <v-icon>more_vert</v-icon> </v-btn>
+
+        <v-menu
+          left
+          offset-y
+          bottom>
+          <v-btn icon flat color="primary" slot="activator"> <v-icon>more_vert</v-icon> </v-btn>
+          <v-list dense>
+            <v-list-tile
+            @click="$store.dispatch('toggleDarkMode')">
+          <v-list-tile-title v-if="$store.getters.darkMode">Light mode</v-list-tile-title>
+          <v-list-tile-titlev v-else>Dark mode</v-list-tile-titlev>
+        </v-list-tile>
+      </v-list>
+        </v-menu>
+
+
       </v-toolbar-items>
     </v-toolbar>
     <div :style="palsListStyle">
@@ -145,14 +160,15 @@ export default {
           title: "Guy Brooks",
           subtitle: "<span class='text--primary'>Canada</span> &mdash; Oct 23"
         },
-        { divider: true, inset: true },
+        { divider: true, inset: true }
       ]
     };
   },
   methods: {
     updateStyle() {
-      console.log
-      this.drawerToolbarHeight = this.$refs.drawerToolbar && this.$refs.drawerToolbar.$el.clientHeight;
+      console.log;
+      this.drawerToolbarHeight =
+        this.$refs.drawerToolbar && this.$refs.drawerToolbar.$el.clientHeight;
       this.palsListStyle = {
         height: `calc(100vh - ${this.drawerToolbarHeight}px)`,
         paddingBottom: "10px",
@@ -161,11 +177,12 @@ export default {
       };
     }
   },
-  mounted(){
-    console.log("mounted!")
+  mounted() {
+    console.log("mounted!");
     this.updateStyle();
   }
 };
 </script>
 
-<style></style>
+<style>
+</style>

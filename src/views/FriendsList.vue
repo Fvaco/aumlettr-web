@@ -37,23 +37,22 @@
         </v-flex>
       </v-flex>
       </v-layout>
-      
-
-      
-      
     </v-layout>    
   </v-container>
 </template>
 
 <script>
-import AppFriends from '../components/AppFriends.vue';
+import AppFriends from "../components/AppFriends.vue";
 import AppToolbar from "../components/AppToolbar.vue";
 export default {
   components: {
     AppFriends,
     AppToolbar
+  },
+  created(){
+    console.log(this.$vuetify);
   }
-}
+};
 </script>
 
 <style>

@@ -4,8 +4,7 @@
       app
       fixed
       shift
-      :value="$vuetify.breakpoint.smAndDown"
-      color="white">
+      :value="$vuetify.breakpoint.smAndDown">
       <v-btn
         color="primary"
         :ripple="false"
@@ -47,11 +46,8 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-
 </style>

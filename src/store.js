@@ -6,21 +6,27 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     mobileNavigation: false,
+    darkMode: true,
     friends: []
   },
   actions: {
     setMobileNavigation({ commit }, payload) {
       commit("setMobileNavigation", payload);
+    },
+    toggleDarkMode({ commit }) {
+      commit("toggleDarkMode");
     }
   },
   mutations: {
-    setMobileNavigation(state, payload){
+    setMobileNavigation(state, payload) {
       state.mobileNavigation = payload;
+    },
+    toggleDarkMode(state) {
+      state.darkMode = !state.darkMode;
     }
   },
   getters: {
-    mobileNavigation: state => {
-      return state.mobileNavigation;
-    }
+    mobileNavigation: state => state.mobileNavigation,
+    darkMode: state => state.darkMode
   }
 });

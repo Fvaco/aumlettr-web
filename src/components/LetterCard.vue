@@ -4,6 +4,7 @@
     color="whitesmoke"
     @mouseover="mouseover = true;"
     @mouseout="mouseover = false;"
+    :to="{name:'letter'}"
     :class="{
       'elevation-5': mouseover
     }"
@@ -32,8 +33,8 @@
     <v-divider></v-divider>
 
     <v-layout class="pt-2" d-flex column justify-center>
-      <h4 class="grey--text text--darken-2">Guy Brooks</h4>
-      <span class="caption">{{ $moment().format("ll") }}</span>
+      <h4 class="grey--text text--darken-1">Guy Brooks</h4>
+      <span class="caption grey--text">{{ $moment().format("ll") }}</span>
       <v-spacer></v-spacer>
     </v-layout>
   </v-card>

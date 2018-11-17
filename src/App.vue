@@ -1,7 +1,5 @@
 <template>
-  <v-app id="app">
-    
-    <!-- <v-toolbar app flat fixed></v-toolbar> -->
+  <v-app id="app" :dark="darkMode">
     <v-navigation-drawer
       app
       v-if="$vuetify.breakpoint.mdAndUp"
@@ -16,6 +14,8 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex';
+
 import AppFriends from "./components/AppFriends.vue";
 import AppBottomNav from "./components/AppMobileBottomNav.vue";
 
@@ -28,19 +28,9 @@ export default {
   data() {
     return {};
   },
-  // watch:{
-  //   isMobileViewport(newValue, oldValue){
-  //     if(oldValue !== newValue) 
-  //     this.$store.dispatch('setMobileNavigation', newValue);
-  //   }
-  // },
-  // computed:{
-  //   isMobileViewport(){
-  //     return this.$vuetify.breakpoint.smAndDown;
-  //   }
-  // },
-  // created() {
-  //   this.$store.dispatch('setMobileNavigation', this.isMobileViewport);
-  // }
+  computed: {
+    ...mapGetters(['darkMode'])
+  },
+
 };
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div>
     <v-toolbar ref="mobileToolbar" 
-      fixed flat 
-        :color="$vuetify.theme.backgroundColor">
+      fixed 
+      flat>
       <slot v-for="slot in Object.keys($slots)" :name="slot" :slot="slot"></slot>
     </v-toolbar>
     <div :style="{marginBottom: toolbarHeight}"></div>
@@ -11,21 +11,21 @@
 
 <script>
 export default {
-  data(){
+  data() {
     return {
       toolbarHeight: 0
+    };
+  },
+  methods: {
+    checkToolbarPadding() {
+      if (this.$refs.mobileToolbar)
+        this.toolbarHeight = this.$refs.mobileToolbar.$el.clientHeight + "px";
     }
   },
-  methods:{
-    checkToolbarPadding(){
-      if(this.$refs.mobileToolbar)
-        this.toolbarHeight = this.$refs.mobileToolbar.$el.clientHeight + 'px';
-    }
-  },
-  mounted(){
+  mounted() {
     this.checkToolbarPadding();
   }
-}
+};
 </script>
 
 <style>
