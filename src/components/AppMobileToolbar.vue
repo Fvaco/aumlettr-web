@@ -1,12 +1,24 @@
 <template>
-  <div>
-    <v-toolbar extension-height="65" scroll-threshold="100" scroll-toolbar-off-screen v-bind="$attrs" ref="mobileToolbar" 
-      fixed 
+  <v-layout column :style="{ marginBottom: toolbarHeight }">
+    <v-flex>
+      <v-toolbar
+      extension-height="70"
+      :scroll-threshold="100"
+      scroll-toolbar-off-screen
+      v-bind="$attrs"
+      ref="mobileToolbar"
+      fixed
+      
       flat>
-      <slot v-for="slot in Object.keys($slots)" :name="slot" :slot="slot"></slot>
+      <slot
+        v-for="slot in Object.keys($slots)"
+        :name="slot"
+        :slot="slot"
+      ></slot>
     </v-toolbar>
-    <div :style="{marginBottom: toolbarHeight}"></div>
-  </div>
+
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
@@ -24,10 +36,8 @@ export default {
   },
   mounted() {
     this.checkToolbarPadding();
-    console.log(this);
   }
 };
 </script>
 
-<style>
-</style>
+<style></style>

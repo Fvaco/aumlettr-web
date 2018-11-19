@@ -1,6 +1,6 @@
 <template>
-  <v-container fill-height class="pa-0" fluid> 
-    <router-view></router-view> 
+  <v-container fill-height class="pa-0" fluid>
+    <router-view></router-view>
   </v-container>
 </template>
 
@@ -8,5 +8,4 @@
 export default {};
 </script>
 
-<style>
-</style>
+<style></style>

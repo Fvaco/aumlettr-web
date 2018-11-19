@@ -1,24 +1,20 @@
 <template>
-<div id="recent-letters">
-  <v-container>
-    <h2 class="">Recently received</h2>
-  </v-container>
-  
-  <div class="letter-cards-list_wrapper">
-    <div class="letter-card__wrapper" :key="index" v-for="index in 10">
-      <letter-card></letter-card>
+  <div id="recent-letters">
+    <v-container> <h2 class="">Recently received</h2> </v-container>
+
+    <div class="letter-cards-list_wrapper">
+      <div class="letter-card__wrapper" :key="index" v-for="index in 10">
+        <letter-card></letter-card>
+      </div>
     </div>
-  </div>
-  <v-container class="mt-4">
-    <v-layout row align-baseline justify-center>
-      <v-flex class="title text-xs-center grey--text">
+    <v-container class="mt-2">
+      <v-layout row align-baseline justify-center>
+        <v-flex class="title text-xs-center grey--text">
           <v-icon class="pr-2">inbox</v-icon> No incoming letters at this moment
-      </v-flex>
-    </v-layout>
-  </v-container>
-  
-</div>
-  
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </div>
 </template>
 
 <script>

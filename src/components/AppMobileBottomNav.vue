@@ -1,10 +1,6 @@
 <template>
   <div v-if="$vuetify.breakpoint.smAndDown">
-    <v-bottom-nav
-      app
-      fixed
-      shift
-      :value="$vuetify.breakpoint.smAndDown">
+    <v-bottom-nav app fixed shift :value="$vuetify.breakpoint.smAndDown">
       <v-btn
         color="primary"
         :ripple="false"
@@ -49,5 +45,4 @@
 export default {};
 </script>
 
-<style>
-</style>
+<style></style>
