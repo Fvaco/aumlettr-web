@@ -6,14 +6,13 @@
 
 <script>
 import RecentLetters from "../components/RecentLetters.vue";
-import AppToolbar from "../components/AppToolbar.vue";
 
 export default {
   components: {
-    RecentLetters,
-    AppToolbar
+    RecentLetters
   }
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

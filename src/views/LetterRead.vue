@@ -3,7 +3,10 @@
     <v-layout column>
       <v-flex>
         <app-toolbar>
-          <v-toolbar-title>Pen friends</v-toolbar-title>
+          <v-toolbar-side-icon @click="$router.go(-1)">
+            <v-icon>mdi-close</v-icon>
+          </v-toolbar-side-icon>
+          <v-toolbar-title></v-toolbar-title>
           <v-spacer></v-spacer>
         </app-toolbar>
       </v-flex>
@@ -24,7 +27,7 @@
 </template>
 
 <script>
-import AppToolbar from '../components/AppToolbar.vue'
+import AppToolbar from "../components/AppToolbar.vue";
 export default {
   components: {
     AppToolbar
@@ -32,4 +35,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+</style>

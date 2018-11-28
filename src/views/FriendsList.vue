@@ -55,10 +55,8 @@ export default {
     AppFriends,
     AppToolbar
   },
-  created() {
-    console.log(this.$vuetify);
-  }
 };
 </script>
 
-<style></style>
+<style>
+</style>
