@@ -1,5 +1,5 @@
 # :sparkles: Aumlettr
-Aumlettr is a website where you can meet people around the world. 
+Aumlettr is a web app where you can meet people around the world. 
 
 The farther your pen friend lives, the longer it will take your message to arrive. Make your letter be worth the wait!
 
