@@ -6,6 +6,7 @@ const User = gql`
     username: String!
     location: String!
     friends: [User]
+    letters: [Letter]
   }
   extend type Query {
     getUser(id: ID!): User

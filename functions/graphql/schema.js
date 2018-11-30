@@ -9,7 +9,19 @@ const Query = gql`
   }
 `;
 
+const resolvers = {
+  Query: {
+    getUser: (obj, { id }, context, info) => {
+      return {
+        _id: id,
+        username: "Paquito",
+        location: "Las Palmas de Gran Canaria"
+      };
+    }
+  }
+};
+
 module.exports = {
   typeDefs: [Query, User, Letter],
-  resolvers: {}
+  resolvers
 };

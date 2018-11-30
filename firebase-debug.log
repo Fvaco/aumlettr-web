@@ -1,0 +1,28 @@
+[debug] [2018-11-30T08:28:52.841Z] ----------------------------------------------------------------------
+[debug] [2018-11-30T08:28:52.843Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only functions
+[debug] [2018-11-30T08:28:52.844Z] CLI Version:   6.1.1
+[debug] [2018-11-30T08:28:52.844Z] Platform:      darwin
+[debug] [2018-11-30T08:28:52.844Z] Node Version:  v11.0.0
+[debug] [2018-11-30T08:28:52.845Z] Time:          Fri Nov 30 2018 08:28:52 GMT+0000 (Western European Standard Time)
+[debug] [2018-11-30T08:28:52.845Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-30T08:28:52.854Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-30T08:28:52.854Z] > authorizing via signed-in user
+[debug] [2018-11-30T08:28:52.854Z] [iam] checking project aumlettr-web for permissions ["firebase.projects.get"]
+[debug] [2018-11-30T08:28:52.856Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/aumlettr-web:testIamPermissions  
+
+[debug] [2018-11-30T08:28:53.891Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-30T08:28:53.892Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/aumlettr-web  
+ 
+[debug] [2018-11-30T08:28:54.940Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/fvaco/workspace/PersonalProjects/slwly-webapp'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-11-30T08:28:55.355Z] Fetching environment
+[debug] [2018-11-30T08:28:55.357Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/864105823567:getServerAppConfig  
+ 
+[debug] [2018-11-30T08:28:55.630Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-30T08:28:55.630Z] Starting @google-cloud/functions-emulator
+[debug] [2018-11-30T08:28:56.695Z] Parsing function triggers
+[info] ✔  functions: api: http://localhost:5000/aumlettr-web/us-central1/api
