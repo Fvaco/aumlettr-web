@@ -7,7 +7,8 @@ const Letter = gql`
     recipient: User!
     text: String!
     arrival: String!
-    read: String!
+    created: String!
+    read: String
   }
 
   input LetterInput {

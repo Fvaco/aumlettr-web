@@ -1,7 +1,7 @@
 const { gql, makeExecutableSchema } = require("apollo-server-express");
 
-const User = require("./schemas/user.js");
-const Letter = require("./schemas/letter.js");
+const User = require("./schemas/user/userType");
+const Letter = require("./schemas/letter/letterType");
 
 const Query = gql`
   type Query {
@@ -9,19 +9,4 @@ const Query = gql`
   }
 `;
 
-const resolvers = {
-  Query: {
-    getUser: (obj, { id }, context, info) => {
-      return {
-        _id: id,
-        username: "Paquito",
-        location: "Las Palmas de Gran Canaria"
-      };
-    }
-  }
-};
-
-module.exports = {
-  typeDefs: [Query, User, Letter],
-  resolvers
-};
+module.exports = [Query, User, Letter];
