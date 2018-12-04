@@ -10,13 +10,13 @@ const Letter = gql`
     created: String!
     read: String
   }
-
   input LetterInput {
     recipient: String!
     text: String!
   }
   extend type Query {
     getLetters: [Letter!]
+    getLetter(id: ID!): Letter
   }
 `;
 
